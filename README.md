@@ -1,4 +1,4 @@
-## 🛡Custom Encrypted Protocol (ECDHE + AES-GCM + TOFU)
+## Custom Encrypted Protocol (ECDHE + AES-GCM + TOFU)
 
 This project implements a secure custom communication protocol inspired by HTTPS, designed for use between trusted servers or clients.
 
@@ -14,9 +14,9 @@ This project implements a secure custom communication protocol inspired by HTTPS
 
 ---
 
-## 🧪 Test Scenario
+## Test Scenario
 
-### 🔧 1. Build the Project
+### 1. Build the Project
 
 Assuming Gradle and JDK 17+:
 
@@ -24,7 +24,7 @@ Assuming Gradle and JDK 17+:
 ./gradlew build
 ```
 
-### 🖥️ 2. Run the Server
+### 2. Run the Server
 
 ```bash
 java -cp build/classes/java/main SecureServer
@@ -37,7 +37,7 @@ Server fingerprint: e3a5...ce12
 Encrypted session established
 ```
 
-### 👨‍💻 3. Run the Client
+### 3. Run the Client
 
 ```bash
 java -cp build/classes/java/main SecureClient
@@ -65,7 +65,7 @@ Server: Hello
 
 ---
 
-## 🔁 Reset Trust
+## Reset Trust
 
 If the server's fingerprint changes (e.g., new key generated), the client will reject the connection. To reset trust:
 
@@ -100,7 +100,7 @@ rm .trusted_server  # or delete the file manually
 
 ## Possible Improvements
 
-* ✍️ Use JSON or binary message format
-* 🗂️ Add protocol layers (`type`, `payload`, `timestamp`)
-* 🔏 Add message signatures (e.g., HMAC or RSA signatures)
-* 💾 Persist ECDH keypair on the server
+*  Use JSON or binary message format
+*  Add protocol layers (`type`, `payload`, `timestamp`)
+*  Add message signatures (e.g., HMAC or RSA signatures)
+*  Persist ECDH keypair on the server
